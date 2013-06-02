@@ -8,6 +8,7 @@ add_subdirectory(ch4)
 add_subdirectory(ch5)
 add_subdirectory(ch6)
 add_subdirectory(ch9)
+add_subdirectory(ch10)
 add_subdirectory(other)
   
 include_directories(${APUE_SOURCE_DIR}/include)
