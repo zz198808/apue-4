@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 2.8)
+
+set(EXECUTABLE_OUTPUT_PATH ${APUE_BINARY_DIR}/bin)
+
+include_directories(${APUE_SOURCE_DIR}/include)
+
+add_executable(fork fork.c)
+add_executable(fileshare fileshare.c)
+add_executable(freopen freopen.c)
+add_executable(prac3_3 prac3_3.c)
+add_executable(prac3_4 prac3_4.c)
+add_executable(prac3_5 prac3_5.c)
+add_executable(prac5_1 prac5_1.c)
+add_executable(prac5_2 prac5_2.c)
+add_executable(env env.c)
+add_executable(prac7_1 prac7_1.c)
+
+target_link_libraries(fork utils)
+target_link_libraries(fileshare utils)
+target_link_libraries(freopen utils)
+target_link_libraries(prac3_3 utils)
+target_link_libraries(prac3_4 utils)
+target_link_libraries(prac3_5 utils)
+target_link_libraries(prac5_1 utils)
+target_link_libraries(prac5_2 utils)
+target_link_libraries(env utils)
+target_link_libraries(prac7_1 utils)
