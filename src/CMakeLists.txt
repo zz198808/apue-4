@@ -11,8 +11,9 @@ add_subdirectory(ch9)
 add_subdirectory(ch10)
 add_subdirectory(ch13)
 add_subdirectory(ch15)
+add_subdirectory(ch16)
 add_subdirectory(other)
-  
+
 include_directories(${APUE_SOURCE_DIR}/include)
 
 add_executable(apue apue.c)
