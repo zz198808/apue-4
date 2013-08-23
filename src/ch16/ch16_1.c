@@ -1,3 +1,4 @@
+
 #include "apue.h"
 #include <netdb.h>
 #include <arpa/inet.h>
@@ -10,7 +11,7 @@ void
 print_family(struct addrinfo* aip)
 {
   printf(" family ");
-  switch (aip->family) {
+  switch (aip->ai_family) {
   case AF_INET:
     printf("inet");
     break;
@@ -122,7 +123,7 @@ main(int argc, char* argv[])
   hint.ai_addr = NULL;
   hint.ai_next = NULL;
   if ((err = getaddrinfo(argv[1], argv[2], &hint, &ailist)) != 0)
-    err_quite("getaddrinfo error: %s", gai_strerror(err));
+    err_quit("getaddrinfo error: %s", gai_strerror(err));
   for (aip = ailist; aip != NULL; aip = aip->ai_next) {
     print_flags(aip);
     print_family(aip);
@@ -139,5 +140,3 @@ main(int argc, char* argv[])
   }
   exit(0);
 }
-
-    
